@@ -182,7 +182,7 @@ function LandingPage() {
           </h1>
           
           <img
-            className="z-20 -mt-16 lg:-mt-24"
+            className="z-20 -mt-20 lg:-mt-32"
             src={cube}
             alt="Cube"
             style={{ width: '400px', maxWidth: '90vw' }}
