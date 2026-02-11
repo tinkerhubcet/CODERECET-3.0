@@ -188,7 +188,7 @@ function LandingPage() {
             style={{ width: '400px', maxWidth: '90vw' }}
           />
           
-          <div className="absolute bottom-8 lg:bottom-12 w-full px-4 lg:px-20 flex justify-between items-center z-30">
+          <div className="absolute bottom-24 lg:bottom-28 w-full px-4 lg:px-20 flex justify-between items-center z-30">
             <div className="border-2 border-custom-white rounded-lg px-6 py-4 text-center">
               <div className="text-4xl lg:text-5xl font-bold text-custom-white font-satoshi_v">13</div>
               <div className="text-sm lg:text-base text-custom-white font-satoshi_v">March</div>
