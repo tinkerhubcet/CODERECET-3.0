@@ -8,15 +8,6 @@ import RegisterButton from "../components/RegisterButton";
 
 function LandingPage() {
   const [isOpen, setIsOpen] = useState(false);
-  const words = [
-    "CODE RECET",
-    "CODE RECET",
-    "CODE RECET",
-    "CODE RECET",
-    "CODE RECET",
-    "CODE RECET",
-    "CODE RECET",
-  ];
 
   return (
     <div id="landing">
@@ -172,51 +163,39 @@ function LandingPage() {
             </div>
           </nav>
         </div>
-        <div className="flex flex-col items-center">
-          <h1
-            className="z-10 lg:mt-32 mt-12 text-5xl lg:text-8xl text-center
-                  "
-          >
-            <span className="font-thomeo" style={{ color: '#FFFFFA' }}>CET<span className="font-satoshi_v">'</span>S BIGGEST <br></br>{" "}
-            HACKATHON</span> <span className="font-hoops_brother" style={{ color: '#E6F85A' }}>IS BACK.</span>
+        <div className="flex flex-col items-center justify-center min-h-[calc(100vh-120px)]">
+          <h1 className="z-10 text-center">
+            <div className="font-thomeo text-5xl lg:text-8xl" style={{ color: '#FFFFFA', lineHeight: '1.1' }}>
+              CET<span className="font-satoshi_v">'</span>S
+            </div>
+            <div className="font-thomeo text-5xl lg:text-8xl" style={{ color: '#FFFFFA', lineHeight: '1.1' }}>
+              BIGGEST HACKATHON
+            </div>
+            <div className="font-hoops_brother text-5xl lg:text-8xl mt-4" style={{ color: '#E6F85A' }}>
+              IS BACK.
+            </div>
           </h1>
-          <div className="z-30 mt-4 md:mt-8 lg:mt-10 flex justify-center">
-            <RegisterButton />
-          </div>
-          {/* <div className="sm:hidden mt-4 mb-2">
-            <RegisterButton />
-          </div> */}
+          
           <img
-            className="lg:-mt-32 -mt-20 z-20"
-            src={gif}
-            width={748}
-            height={748}
+            className="z-20 mt-8 lg:mt-12"
+            src={cube}
+            alt="Cube"
+            style={{ width: '400px', maxWidth: '90vw' }}
           />
           
-          {/* <div className="mt-6 mb-10 flex justify-center items-center w-full px-4 overflow-x-hidden">
-            <div
-              className="apply-button"
-              data-hackathon-slug="code-recet-2"
-              data-button-theme="dark"
-              style={{
-                height: "44px",
-                width: "100%",
-                maxWidth: "192px",
-              }}
-            ></div>
-          </div> */}
-          <div className="lg:h-20 absolute bottom-0 -mt-16 lg:-mt-[18rem] w-full z-10 bg-custom-black inline-flex flex-nowrap border-2 border-l-0 border-r-0 border-custom-gray">
-            <div className="overflow-hidden relative">
-              <div className="flex animate-infinite-scroll space-x-16 sm:space-x-36 p-2 pt-3">
-                {words.concat(words).map((word, index) => (
-                  <li
-                    key={index}
-                    className="text-xl sm:text-lg lg:text-6xl list-none text-custom-gray font-seasons_r whitespace-nowrap"
-                  >
-                    {word}
-                  </li>
-                ))}
-              </div>
+          <div className="absolute bottom-8 lg:bottom-12 w-full px-4 lg:px-20 flex justify-between items-center z-30">
+            <div className="border-2 border-custom-white rounded-lg px-6 py-4 text-center">
+              <div className="text-4xl lg:text-5xl font-bold text-custom-white font-satoshi_v">13</div>
+              <div className="text-sm lg:text-base text-custom-white font-satoshi_v">March</div>
+            </div>
+            
+            <div className="text-2xl lg:text-4xl font-satoshi_v text-custom-white text-center italic">
+              10 : 00 : 00
+            </div>
+            
+            <div className="border-2 border-custom-white rounded-lg px-6 py-4 text-center">
+              <div className="text-xl lg:text-2xl font-bold text-custom-white font-satoshi_v">CET</div>
+              <div className="text-xs lg:text-sm text-custom-white font-satoshi_v">Join Us At</div>
             </div>
           </div>
         </div>
