@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-scroll";
 import cube from "../assets/Cube.png";
-import logo from "../assets/logo.png";
+import logo from "../assets/Logo copy.png";
 import menu from "../assets/menu_white.svg";
 import close from "../assets/close_white.svg";
 import RegisterButton from "../components/RegisterButton";
@@ -33,14 +33,9 @@ function LandingPage() {
         </div>
         <div className="flex justify-center">
           <nav className="flex justify-between items-center mt-16 w-full z-50 px-4 lg:px-8">
-            <div className="cursor-pointer">
-              <img
-                src={logo}
-                className="w-12 h-12 ml-4 lg:ml-0 sm:w-20 sm:h-20 lg:w-[60px] lg:h-[60px]"
-              />
-            </div>
-            <div className="flex-1 flex justify-center ml-20 lg:ml-24">
-              <ul className="sm:flex hidden lg:text-xl font-satoshi_v space-x-2 lg:space-x-20 text-custom-white items-center">
+            {/* Left: Nav Menu */}
+            <div className="flex-1">
+              <ul className="sm:flex hidden lg:text-xl font-satoshi_v space-x-4 lg:space-x-8 text-custom-white items-center">
                 <li>
                   <Link
                     to="about"
@@ -83,27 +78,31 @@ function LandingPage() {
                 </li>
               </ul>
             </div>
-            {/* Desktop Register Button */}
-            <div className="hidden sm:block">
-              <a
-                href="https://code-recet-2.devfolio.co/application"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-custom-yellow rounded-[30px] h-[50px] w-[140px] flex items-center justify-center cursor-pointer hover:bg-yellow-600 transition-colors"
-              >
-                <span className="font-satoshi_v text-[#0A0A0A] text-[18px] font-medium">
-                  REGISTER
-                </span>
-              </a>
+            
+            {/* Center: Logo */}
+            <div className="cursor-pointer flex-shrink-0">
+              <img
+                src={logo}
+                className="w-16 h-16 sm:w-24 sm:h-24 lg:w-32 lg:h-32"
+              />
             </div>
-            <button
-              onClick={() => setIsOpen(!isOpen)}
-              className="inline-block sm:hidden text-custom-white z-50 focus:outline-none"
-            >
-              <div className="w-10 h-10 bg-custom-black rounded-sm flex items-center justify-center mr-[20px] -mt-1">
-                <img src={isOpen ? close : menu} className="w-6 h-6" />
+            
+            {/* Right: Register Button */}
+            <div className="flex-1 flex justify-end items-center gap-4">
+              <div className="hidden sm:block">
+                <span className="font-satoshi_v text-custom-white text-[18px] font-medium cursor-pointer">
+                  Register
+                </span>
               </div>
-            </button>
+              <button
+                onClick={() => setIsOpen(!isOpen)}
+                className="inline-block sm:hidden text-custom-white z-50 focus:outline-none"
+              >
+                <div className="w-10 h-10 bg-custom-black rounded-sm flex items-center justify-center">
+                  <img src={isOpen ? close : menu} className="w-6 h-6" />
+                </div>
+              </button>
+            </div>
             <div
               className={`sm:hidden fixed top-0 left-0 h-screen w-[60%] bg-custom-black z-40 shadow-lg transform transition-transform duration-300 ${
                 isOpen ? "translate-x-0" : "-translate-x-full"
@@ -154,19 +153,11 @@ function LandingPage() {
                     Contact
                   </Link>
                 </li>
-                {/* Mobile Register Button */}
+                {/* Mobile Register */}
                 <li className="text-left mt-8 pt-4">
-                  <a
-                    href="https://code-recet-2.devfolio.co/application"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="bg-custom-yellow rounded-[30px] h-[50px] w-full flex items-center justify-center cursor-pointer hover:bg-yellow-600 transition-colors"
-                    onClick={() => setIsOpen(false)}
-                  >
-                    <span className="font-satoshi_v text-[#0A0A0A] text-[18px] font-medium">
-                      REGISTER
-                    </span>
-                  </a>
+                  <span className="font-satoshi_v text-custom-white text-[18px] font-medium cursor-pointer">
+                    Register
+                  </span>
                 </li>
               </ul>
             </div>
@@ -196,10 +187,6 @@ function LandingPage() {
             <div className="border-2 border-custom-white rounded-lg px-6 py-4 text-center">
               <div className="text-4xl lg:text-5xl font-bold text-custom-white font-satoshi_v">13</div>
               <div className="text-sm lg:text-base text-custom-white font-satoshi_v">March</div>
-            </div>
-            
-            <div className="text-2xl lg:text-4xl font-satoshi_v text-custom-white text-center italic">
-              10 : 00 : 00
             </div>
             
             <div className="border-2 border-custom-white rounded-lg px-6 py-4 text-center">
