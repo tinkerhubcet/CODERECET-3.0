@@ -1,5 +1,7 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
+import { createPortal } from "react-dom";
 import { Link } from "react-scroll";
+import { createBlendy } from "blendy";
 import cube from "../assets/Cube.png";
 import logo from "../assets/Logo copy.png";
 import menu from "../assets/menu_white.svg";
@@ -8,6 +10,13 @@ import devfolioLogo from "../assets/Devfolio/Devfolio_Logo-White.png";
 
 function LandingPage() {
   const [isOpen, setIsOpen] = useState(false);
+  const [showLocation, setShowLocation] = useState(false);
+  const [showCalendar, setShowCalendar] = useState(false);
+  const blendyRef = useRef(null);
+
+  useEffect(() => {
+    blendyRef.current = createBlendy({ animation: 'spring' });
+  }, []);
 
   useEffect(() => {
     const script = document.createElement('script');
@@ -200,14 +209,32 @@ function LandingPage() {
           />
           
           <div className="absolute bottom-24 lg:bottom-28 w-full px-4 lg:px-20 flex justify-between items-center z-30">
-            <div className="border-2 border-custom-white rounded-lg px-6 py-4 text-center">
-              <div className="text-4xl lg:text-5xl font-bold text-custom-white font-satoshi_v">13</div>
-              <div className="text-sm lg:text-base text-custom-white font-satoshi_v">March</div>
+            <div
+              className="border-2 border-custom-white rounded-lg px-6 py-4 text-center cursor-pointer"
+              data-blendy-from="calendar"
+              onClick={() => {
+                setShowCalendar(true);
+                blendyRef.current?.toggle('calendar');
+              }}
+            >
+              <div>
+                <div className="text-4xl lg:text-5xl font-bold text-custom-white font-satoshi_v">13</div>
+                <div className="text-sm lg:text-base text-custom-white font-satoshi_v">March</div>
+              </div>
             </div>
             
-            <div className="border-2 border-custom-white rounded-lg px-6 py-4 text-center">
-              <div className="text-xl lg:text-2xl font-bold text-custom-white font-satoshi_v">CET</div>
-              <div className="text-xs lg:text-sm text-custom-white font-satoshi_v">Join Us At</div>
+            <div
+              className="border-2 border-custom-white rounded-lg px-6 py-4 text-center cursor-pointer"
+              data-blendy-from="location"
+              onClick={() => {
+                setShowLocation(true);
+                blendyRef.current?.toggle('location');
+              }}
+            >
+              <div>
+                <div className="text-xl lg:text-2xl font-bold text-custom-white font-satoshi_v">CET</div>
+                <div className="text-xs lg:text-sm text-custom-white font-satoshi_v">Join Us At</div>
+              </div>
             </div>
           </div>
           
@@ -227,6 +254,103 @@ function LandingPage() {
           </div>
         </div>
       </div>
+      {showLocation && createPortal(
+        <div className="fixed inset-0 z-[9999] flex items-center justify-center">
+          <div
+            className="absolute inset-0 bg-black/60"
+            onClick={() => {
+              blendyRef.current?.untoggle('location', () => setShowLocation(false));
+            }}
+          />
+          <div
+            className="bg-[#1a1a1a] border-2 border-custom-white rounded-xl p-6 w-[90vw] max-w-[500px] relative z-10"
+            data-blendy-to="location"
+          >
+            <div>
+              <div className="flex justify-between items-center mb-4">
+                <h2 className="text-custom-white font-satoshi_v text-xl font-bold">Location</h2>
+                <button
+                  className="p-1"
+                  onClick={() => {
+                    blendyRef.current?.untoggle('location', () => setShowLocation(false));
+                  }}
+                >
+                  <img src={close} className="w-5 h-5" />
+                </button>
+              </div>
+              <div className="rounded-lg overflow-hidden" style={{ filter: 'invert(90%) hue-rotate(180deg)' }}>
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15864.27996839653!2d76.88728094100948!3d8.545851629468523!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b05bec79541c519%3A0x98324eb5aafb3778!2sCollege%20of%20Engineering%20Trivandrum%20(CET)!5e1!3m2!1sen!2sin!4v1770842775967!5m2!1sen!2sin"
+                  width="100%"
+                  height="300"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                />
+              </div>
+            </div>
+          </div>
+        </div>,
+        document.body
+      )}
+      {showCalendar && createPortal(
+        <div className="fixed inset-0 z-[9999] flex items-center justify-center">
+          <div
+            className="absolute inset-0 bg-black/60"
+            onClick={() => {
+              blendyRef.current?.untoggle('calendar', () => setShowCalendar(false));
+            }}
+          />
+          <div
+            className="bg-[#1a1a1a] border-2 border-custom-white rounded-xl p-6 w-[90vw] max-w-[400px] relative z-10"
+            data-blendy-to="calendar"
+          >
+            <div>
+              <div className="flex justify-between items-center mb-4">
+                <h2 className="text-custom-white font-satoshi_v text-xl font-bold">Event Date</h2>
+                <button
+                  className="p-1"
+                  onClick={() => {
+                    blendyRef.current?.untoggle('calendar', () => setShowCalendar(false));
+                  }}
+                >
+                  <img src={close} className="w-5 h-5" />
+                </button>
+              </div>
+              <div className="bg-[#2a2a2a] rounded-lg p-4">
+                <div className="text-center text-custom-white font-satoshi_v mb-4">
+                  <div className="text-lg font-bold">March 2026</div>
+                </div>
+                <div className="grid grid-cols-7 gap-1 text-center text-sm text-custom-white font-satoshi_v">
+                  {['S', 'M', 'T', 'W', 'T', 'F', 'S'].map((day, i) => (
+                    <div key={`h-${i}`} className="p-2 text-gray-500 font-bold">{day}</div>
+                  ))}
+                  {Array.from({ length: 31 }, (_, i) => (
+                    <div
+                      key={i}
+                      className={`p-2 rounded-md ${
+                        i + 1 === 13
+                          ? 'bg-[#E6F85A] text-black font-bold'
+                          : 'hover:bg-[#3a3a3a]'
+                      }`}
+                    >
+                      {i + 1}
+                    </div>
+                  ))}
+                </div>
+              </div>
+              <button
+                className="w-full mt-4 py-3 rounded-lg font-satoshi_v font-bold text-black"
+                style={{ backgroundColor: '#E6F85A' }}
+              >
+                Add to Calendar
+              </button>
+            </div>
+          </div>
+        </div>,
+        document.body
+      )}
     </div>
   );
 }
