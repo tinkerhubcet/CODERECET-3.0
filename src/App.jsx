@@ -14,7 +14,7 @@ import FAQ from "./pages/faq"
 
 
 function App() {
-  const [showIntro, setShowIntro] = useState(true)
+  const [showIntro, setShowIntro] = useState(false)
 
   const handleScrollDown = () => {
     setShowIntro(false)

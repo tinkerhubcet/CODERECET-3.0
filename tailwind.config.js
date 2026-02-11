@@ -17,7 +17,9 @@ module.exports = {
         seasons_r:['Seasons_r'],
         satoshi_v:['Satoshi_v'],
         bebas_neue:['Bebas'],
-        poppins: ['Poppins', 'sans-serif']
+        poppins: ['Poppins', 'sans-serif'],
+        thomeo: ['Thomeo'],
+        hoops_brother: ['HoopsBrother']
 
       },
       animation: {

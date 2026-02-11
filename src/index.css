@@ -19,6 +19,20 @@
     font-style: normal;
   }
 
+@font-face {
+    font-family: 'Thomeo';
+    src: url('/src/assets/fonts/Thomeo .ttf');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+@font-face {
+    font-family: 'HoopsBrother';
+    src: url('/src/assets/fonts/The Brother Hoops.ttf');
+    font-weight: normal;
+    font-style: normal;
+  }
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

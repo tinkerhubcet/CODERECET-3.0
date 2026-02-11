@@ -174,11 +174,11 @@ function LandingPage() {
         </div>
         <div className="flex flex-col items-center">
           <h1
-            className="text-custom-white z-10 lg:mt-32 mt-12 font-seasons_r text-5xl lg:text-8xl text-center
+            className="z-10 lg:mt-32 mt-12 text-5xl lg:text-8xl text-center
                   "
           >
-            CET<span className="font-satoshi_v">'</span>S BIGGEST <br></br>{" "}
-            <span className="text-custom-yellow">HACKATHON</span> IS BACK.
+            <span className="font-thomeo" style={{ color: '#FFFFFA' }}>CET<span className="font-satoshi_v">'</span>S BIGGEST <br></br>{" "}
+            HACKATHON</span> <span className="font-hoops_brother" style={{ color: '#E6F85A' }}>IS BACK.</span>
           </h1>
           <div className="z-30 mt-4 md:mt-8 lg:mt-10 flex justify-center">
             <RegisterButton />
