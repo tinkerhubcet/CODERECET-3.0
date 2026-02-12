@@ -28,14 +28,14 @@ function Footer() {
               <span className="font-thomeo text-white text-6xl md:text-8xl lg:text-[7rem] block">CODE RECET</span>
             </div>
             <div className="mb-4"></div>
-            <nav className="flex flex-col gap-4 text-white text-lg font-poppins">
+            <nav className="flex flex-col gap-4 text-white text-lg font-tactic_sans">
               <a href="#landing" className="flex items-center gap-2"><span className="text-[#e6f85a] text-xl">&gt;</span> Home</a>
               <a href="#about" className="flex items-center gap-2"><span className="text-[#e6f85a] text-xl">&gt;</span> About Us</a>
               <a href="#events" className="flex items-center gap-2"><span className="text-[#e6f85a] text-xl">&gt;</span> Events</a>
               <a href="#gallery" className="flex items-center gap-2"><span className="text-[#e6f85a] text-xl">&gt;</span> Gallery</a>
               <a href="#team" className="flex items-center gap-2"><span className="text-[#e6f85a] text-xl">&gt;</span> Our Team</a>
             </nav>
-            <div className="flex gap-8 mt-8">
+            <div className="flex gap-8 mt-8 font-tactic_sans">
               <a href="https://twitter.com/coderecet" target="_blank" rel="noopener noreferrer"><img src={twitter} alt="Twitter" className="w-10 h-10" /></a>
               <a href="https://facebook.com/coderecet" target="_blank" rel="noopener noreferrer"><img src={facebook} alt="Facebook" className="w-10 h-10" /></a>
               <a href="https://discord.gg/coderecet" target="_blank" rel="noopener noreferrer"><img src={discord} alt="Discord" className="w-10 h-10" /></a>
@@ -43,8 +43,8 @@ function Footer() {
               <a href="https://github.com/coderecet" target="_blank" rel="noopener noreferrer"><img src={github} alt="GitHub" className="w-10 h-10" /></a>
             </div>
           </div>
-          <div className="flex flex-col items-end w-full md:w-1/2 gap-6">
-            <div className="text-white text-lg font-poppins mb-2 mt-2 md:mt-0">Hackathon Organized by :</div>
+          <div className="flex flex-col items-end w-full md:w-1/2 gap-6 font-tactic_sans">
+            <div className="text-white text-lg mb-2 mt-2 md:mt-0">Hackathon Organized by :</div>
             <img src={tinkerhub} className="w-48 h-auto mb-2" alt="Tinkerhub" />
             <img src={iet} className="w-48 h-auto" alt="IET" />
           </div>
