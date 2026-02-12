@@ -19,7 +19,7 @@ import instagram from "../assets/instagram.svg";
 function Footer() {
   return (
     <footer className="w-full min-h-[420px] flex items-center justify-center bg-gradient-to-b from-[#1A1A1A] via-[#e6f85a] to-[#e6f85a]">
-      <div className="w-full max-w-5xl mx-auto rounded-2xl bg-transparent p-8 md:p-12 flex flex-col gap-8 shadow-lg">
+      <div className="w-full max-w-5xl mx-auto bg-transparent p-8 md:p-12 flex flex-col gap-8">
         <div className="flex flex-col md:flex-row justify-between items-start gap-8">
           <div className="flex flex-col gap-6 w-full md:w-1/2">
             <img src={logo} className="w-24 h-24 mb-2" alt="Code Recet Logo" />
