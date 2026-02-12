@@ -24,9 +24,8 @@ function Footer() {
       <div className="w-full max-w-5xl mx-auto p-8 md:p-12 flex flex-col gap-8">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-start gap-8">
           <div className="flex flex-col gap-6 w-full md:w-1/2">
-            <div className="flex items-center gap-4 mb-2">
-              <img src={logo} className="w-12 h-12" alt="Code Recet Logo" />
-              <span className="font-thomeo text-white text-6xl md:text-8xl lg:text-[7rem]">Code Recet</span>
+            <div className="mb-2">
+              <span className="font-thomeo text-white text-6xl md:text-8xl lg:text-[7rem] block">CODE RECET</span>
             </div>
             <div className="w-full h-[2px] bg-[#e6f85a] mb-4"></div>
             <nav className="flex flex-col gap-4 text-white text-lg font-poppins">
