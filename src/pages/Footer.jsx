@@ -27,7 +27,7 @@ function Footer() {
             <div className="mb-2">
               <span className="font-thomeo text-white text-6xl md:text-8xl lg:text-[7rem] block">CODE RECET</span>
             </div>
-            <div className="w-full h-[2px] bg-[#e6f85a] mb-4"></div>
+            <div className="mb-4"></div>
             <nav className="flex flex-col gap-4 text-white text-lg font-poppins">
               <a href="#landing" className="flex items-center gap-2"><span className="text-[#e6f85a] text-xl">&gt;</span> Home</a>
               <a href="#about" className="flex items-center gap-2"><span className="text-[#e6f85a] text-xl">&gt;</span> About Us</a>
