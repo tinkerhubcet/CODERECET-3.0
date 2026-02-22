@@ -225,7 +225,7 @@ function LandingPage() {
             />
           </div>
 
-          <div className="absolute bottom-8 sm:bottom-24 lg:bottom-28 w-full px-2 sm:px-4 lg:px-20 flex flex-col sm:flex-row justify-center sm:justify-between items-center gap-4 sm:gap-0 z-30">
+          <div className="absolute bottom-16 sm:bottom-24 lg:bottom-28 w-full px-4 sm:px-4 lg:px-20 flex flex-row justify-between items-center gap-4 z-30">
             <div className="w-full flex flex-row justify-between items-center gap-4">
               <div
                 className="border border-custom-secondary rounded-lg px-4 py-3 sm:px-6 sm:py-4 text-center cursor-pointer transition-all duration-300 hover:scale-110 hover:bg-custom-secondary/10 bg-opacity-80 backdrop-blur-sm"
