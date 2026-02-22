@@ -224,7 +224,7 @@ function LandingPage() {
             style={{ minWidth: '120px', maxWidth: '400px' }}
           />
           {/* Button container placed on grid */}
-          <div className="absolute left-0 right-0 mx-auto flex flex-row justify-between items-center px-4 sm:px-10" style={{ top: '60%' }}>
+          <div className="absolute left-0 right-0 mx-auto flex flex-row justify-between items-center px-4 sm:px-10 top-[60%] md:top-[75%] lg:top-[80%]">
             <div
               className="border border-custom-secondary rounded-lg px-4 py-3 sm:px-6 sm:py-4 text-center cursor-pointer transition-all duration-300 hover:scale-110 hover:bg-custom-secondary/10 bg-opacity-80 backdrop-blur-sm"
               style={{ boxShadow: '0 0 20px rgba(230, 248, 90, 0.25)' }}
@@ -255,8 +255,9 @@ function LandingPage() {
                   blendyRef.current?.toggle('location');
                 });
               }}
-            >
               
+            >
+
               <div>
                 <div className="text-lg sm:text-xl lg:text-2xl font-bold text-custom-white font-satoshi_v">CET</div>
                 <div className="text-xs sm:text-sm lg:text-sm text-custom-white font-satoshi_v">Join Us At</div>
