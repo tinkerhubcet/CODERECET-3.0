@@ -256,6 +256,7 @@ function LandingPage() {
                 });
               }}
             >
+              
               <div>
                 <div className="text-lg sm:text-xl lg:text-2xl font-bold text-custom-white font-satoshi_v">CET</div>
                 <div className="text-xs sm:text-sm lg:text-sm text-custom-white font-satoshi_v">Join Us At</div>
