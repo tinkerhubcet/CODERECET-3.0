@@ -20,11 +20,18 @@ export default function MerchSection() {
         <img
           src="/assets/merch/isthatall.png"
           alt="Is That All?"
-          className="w-64 sm:w-80 md:w-96 relative -left-4"
+          className="w-48 sm:w-80 md:w-96 mt-4 mb-6"
         />
-
+        <div className="flex flex-col items-center mb-6">
+          <span className="text-custom-white text-center text-sm sm:text-base mb-1" style={{ fontFamily: 'TacticSans' }}>
+            If haven’t already!
+          </span>
+          <span className="text-custom-secondary text-center text-lg sm:text-2xl font-bold" style={{ fontFamily: 'TacticSans' }}>
+            NOPE!
+          </span>
+        </div>
         <p
-          className="text-custom-white text-center text-lg sm:text-xl mt-4 mb-12 max-w-xl"
+          className="text-custom-white text-center text-xs sm:text-lg mt-2 mb-12 max-w-xs sm:max-w-xl"
           style={{ fontFamily: 'TacticSans' }}
         >
           Every one who gets selected gets Goodies! T-Shirts, stickers, you name it!
