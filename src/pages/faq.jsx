@@ -39,18 +39,18 @@ const faqs = [
 
 export default function FAQSection() {
   return (
-    <section className="bg-custom-black px-10 py-40 relative overflow-hidden">
+    <section className="bg-custom-black px-4 md:px-10 py-40 relative overflow-visible">
       <img
         src="/assets/faq/tunnel.png"
         alt="Tunnel Background"
         className="absolute inset-0 w-full h-full object-cover z-0 opacity-[0.18] pointer-events-none"
       />
 
-      <div className="mb-20 relative z-10 flex flex-col items-start px-2 lg:px-12">
-        <h3 className="font-hoops_brother text-[47px] text-custom-secondary leading-none">
+      <div className="mb-20 relative z-10 flex flex-col items-start px-2 md:px-12 overflow-visible">
+        <h3 className="font-hoops_brother text-[6vw] md:text-[47px] text-custom-secondary leading-none">
           Frequently Asked
         </h3>
-        <h2 className="font-thomeo text-[76px] uppercase text-custom-white leading-none">
+        <h2 className="font-thomeo text-[10vw] md:text-[76px] uppercase text-custom-white leading-none">
           QUESTIONS
         </h2>
       </div>
