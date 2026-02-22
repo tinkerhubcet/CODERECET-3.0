@@ -20,17 +20,9 @@ export default function MerchSection() {
         <img
           src="/assets/merch/isthatall.png"
           alt="Is That All?"
-          className="w-48 sm:w-80 md:w-96 mb-0 mt-32"
+          className="w-48 sm:w-80 md:w-96 mb-8 mt-32"
           style={{ position: 'relative', top: '0' }}
         />
-        <div className="flex flex-col items-center mt-2 mb-8">
-          <span className="text-custom-white text-center text-sm sm:text-base mb-1" style={{ fontFamily: 'TacticSans' }}>
-            If haven’t already!
-          </span>
-          <span className="text-custom-secondary text-center text-lg sm:text-2xl font-bold" style={{ fontFamily: 'TacticSans' }}>
-            NOPE!
-          </span>
-        </div>
         <p
           className="text-custom-white text-center text-xs sm:text-lg mt-2 mb-12 max-w-xs sm:max-w-xl"
           style={{ fontFamily: 'TacticSans' }}
@@ -61,9 +53,6 @@ export default function MerchSection() {
             style={{ height: '44px', width: '312px' }}
           ></div>
         </div>
-        <p className="text-custom-white text-center text-base sm:text-lg mt-2" style={{ fontFamily: 'TacticSans' }}>
-          If haven’t already!
-        </p>
       </div>
     </div>
   );
