@@ -196,6 +196,8 @@ function LandingPage() {
         </div>
         
 
+        
+
         <div className="flex flex-col items-center justify-center min-h-[calc(100vh-120px)] relative mt-8 lg:mt-12 w-full">
           <h1 className="text-center w-full px-2 sm:px-0 mt-16 lg:mt-24">
             <div className="font-thomeo text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-8xl" style={{ color: 'var(--color-white)', lineHeight: '1.1' }}>
