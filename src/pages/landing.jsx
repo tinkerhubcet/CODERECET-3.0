@@ -226,41 +226,42 @@ function LandingPage() {
           </div>
 
           <div className="absolute bottom-8 sm:bottom-24 lg:bottom-28 w-full px-2 sm:px-4 lg:px-20 flex flex-col sm:flex-row justify-center sm:justify-between items-center gap-4 sm:gap-0 z-30">
-            <div
-              className="border border-custom-secondary rounded-lg px-4 py-3 sm:px-6 sm:py-4 text-center cursor-pointer transition-all duration-300 hover:scale-110 hover:bg-custom-secondary/10 bg-opacity-80 backdrop-blur-sm"
-              style={{ boxShadow: '0 0 20px rgba(230, 248, 90, 0.25)' }}
-              onMouseEnter={(e) => e.currentTarget.style.boxShadow = '0 0 30px rgba(230, 248, 90, 0.5)'}
-              onMouseLeave={(e) => e.currentTarget.style.boxShadow = '0 0 20px rgba(230, 248, 90, 0.25)'}
-              data-blendy-from="calendar"
-              onClick={() => {
-                setShowCalendar(true);
-                requestAnimationFrame(() => {
-                  blendyRef.current?.toggle('calendar');
-                });
-              }}
-            >
-              <div>
-                <div className="text-2xl sm:text-4xl lg:text-5xl font-bold text-custom-white font-satoshi_v">13</div>
-                <div className="text-xs sm:text-sm lg:text-base text-custom-white font-satoshi_v">March</div>
+            <div className="w-full flex flex-row justify-between items-center gap-4">
+              <div
+                className="border border-custom-secondary rounded-lg px-4 py-3 sm:px-6 sm:py-4 text-center cursor-pointer transition-all duration-300 hover:scale-110 hover:bg-custom-secondary/10 bg-opacity-80 backdrop-blur-sm"
+                style={{ boxShadow: '0 0 20px rgba(230, 248, 90, 0.25)' }}
+                onMouseEnter={(e) => e.currentTarget.style.boxShadow = '0 0 30px rgba(230, 248, 90, 0.5)'}
+                onMouseLeave={(e) => e.currentTarget.style.boxShadow = '0 0 20px rgba(230, 248, 90, 0.25)'}
+                data-blendy-from="calendar"
+                onClick={() => {
+                  setShowCalendar(true);
+                  requestAnimationFrame(() => {
+                    blendyRef.current?.toggle('calendar');
+                  });
+                }}
+              >
+                <div>
+                  <div className="text-2xl sm:text-4xl lg:text-5xl font-bold text-custom-white font-satoshi_v">13</div>
+                  <div className="text-xs sm:text-sm lg:text-base text-custom-white font-satoshi_v">March</div>
+                </div>
               </div>
-            </div>
-
-            <div
-              className="border border-custom-secondary rounded-lg px-4 py-3 sm:px-6 sm:py-4 text-center cursor-pointer transition-all duration-300 hover:scale-110 hover:bg-custom-secondary/10 bg-opacity-80 backdrop-blur-sm"
-              style={{ boxShadow: '0 0 20px rgba(230, 248, 90, 0.25)' }}
-              onMouseEnter={(e) => e.currentTarget.style.boxShadow = '0 0 30px rgba(230, 248, 90, 0.5)'}
-              onMouseLeave={(e) => e.currentTarget.style.boxShadow = '0 0 20px rgba(230, 248, 90, 0.25)'}
-              data-blendy-from="location"
-              onClick={() => {
-                setShowLocation(true);
-                requestAnimationFrame(() => {
-                  blendyRef.current?.toggle('location');
-                });
-              }}
-            >
-              <div>
-                <div className="text-lg sm:text-xl lg:text-2xl font-bold text-custom-white font-satoshi_v">CET</div>
-                <div className="text-xs sm:text-sm lg:text-sm text-custom-white font-satoshi_v">Join Us At</div>
+              <div
+                className="border border-custom-secondary rounded-lg px-4 py-3 sm:px-6 sm:py-4 text-center cursor-pointer transition-all duration-300 hover:scale-110 hover:bg-custom-secondary/10 bg-opacity-80 backdrop-blur-sm"
+                style={{ boxShadow: '0 0 20px rgba(230, 248, 90, 0.25)' }}
+                onMouseEnter={(e) => e.currentTarget.style.boxShadow = '0 0 30px rgba(230, 248, 90, 0.5)'}
+                onMouseLeave={(e) => e.currentTarget.style.boxShadow = '0 0 20px rgba(230, 248, 90, 0.25)'}
+                data-blendy-from="location"
+                onClick={() => {
+                  setShowLocation(true);
+                  requestAnimationFrame(() => {
+                    blendyRef.current?.toggle('location');
+                  });
+                }}
+              >
+                <div>
+                  <div className="text-lg sm:text-xl lg:text-2xl font-bold text-custom-white font-satoshi_v">CET</div>
+                  <div className="text-xs sm:text-sm lg:text-sm text-custom-white font-satoshi_v">Join Us At</div>
+                </div>
               </div>
             </div>
           </div>
