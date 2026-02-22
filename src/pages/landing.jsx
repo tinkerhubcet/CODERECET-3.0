@@ -237,6 +237,7 @@ function LandingPage() {
                   blendyRef.current?.toggle('calendar');
                 });
               }}
+              
             >
               <div>
                 <div className="text-2xl sm:text-4xl lg:text-5xl font-bold text-custom-white font-satoshi_v">13</div>
