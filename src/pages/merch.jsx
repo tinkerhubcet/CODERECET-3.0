@@ -20,9 +20,10 @@ export default function MerchSection() {
         <img
           src="/assets/merch/isthatall.png"
           alt="Is That All?"
-          className="w-48 sm:w-80 md:w-96 mt-4 mb-6"
+          className="w-48 sm:w-80 md:w-96 mb-0 mt-32"
+          style={{ position: 'relative', top: '0' }}
         />
-        <div className="flex flex-col items-center mb-6">
+        <div className="flex flex-col items-center mt-2 mb-8">
           <span className="text-custom-white text-center text-sm sm:text-base mb-1" style={{ fontFamily: 'TacticSans' }}>
             If haven’t already!
           </span>
