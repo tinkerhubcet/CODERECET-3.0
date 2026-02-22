@@ -215,7 +215,7 @@ function LandingPage() {
             alt="Grid"
             className="absolute left-1/2 -translate-x-1/2 bottom-[-10px] sm:bottom-[-30px] w-full sm:w-[120vw] max-w-none pointer-events-none select-none z-10"
             draggable="false"
-            style={{ minWidth: '320px', maxWidth: '1200px', opacity: 0.7 }}
+            style={{ maxWidth: '1200px', opacity: 0.7 }}
           />
           <img
             className="z-20 relative -mt-10 sm:-mt-20 lg:-mt-32 w-full max-w-[300px] sm:w-[70vw] sm:max-w-[400px]"
