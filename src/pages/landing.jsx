@@ -223,6 +223,7 @@ function LandingPage() {
             alt="Cube"
             style={{ minWidth: '120px', maxWidth: '400px' }}
           />
+          
           {/* Button container placed on grid */}
           <div className="absolute left-0 right-0 mx-auto flex flex-row justify-between items-center px-4 sm:px-10 top-[60%] md:top-[70%] lg:top-[30%]">
             <div
