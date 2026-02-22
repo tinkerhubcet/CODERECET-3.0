@@ -53,6 +53,9 @@ export default function MerchSection() {
             style={{ height: '44px', width: '312px' }}
           ></div>
         </div>
+        <p className="text-custom-white text-center text-base sm:text-lg mt-2" style={{ fontFamily: 'TacticSans' }}>
+          If you haven’t already!
+        </p>
       </div>
     </div>
   );
